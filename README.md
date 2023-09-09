@@ -22,6 +22,10 @@ Extracting dictionaries and creating comprehensive lists.
 We created a unique Dataframe with clean data and split each name by first and last. 
 The data was then exported into its own CSV.
 
-Lastly, we created a PostgreSQL database using each CSV file.
-Each table schema is paired with a CSV file.
-
+1. Create tables in category, subcategory, contacts, campaign order
+2. Import csv files into tables using the psAdmin4 User Interface (UI) in the same table order as in Step 1
+    a. right-click on the table
+    b. select Import/Export Data
+    c. click on folder icon to Navigate to csv file to be imported
+    d. select the csv file, click ok
+3. View table columns and datatypes and imported data by running SELECT * FROM 
