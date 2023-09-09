@@ -1,11 +1,11 @@
 -- Drop table if exists
 DROP TABLE IF EXISTS campaign;
 
--- DROP TABLE IF EXISTS category;
+DROP TABLE IF EXISTS category;
 
--- DROP TABLE IF EXISTS subcategory;
+DROP TABLE IF EXISTS subcategory;
 
--- DROP TABLE IF EXISTS contacts;
+DROP TABLE IF EXISTS contacts;
 
 -- Create a new tables 
 
@@ -48,42 +48,9 @@ CREATE TABLE campaign (
 	FOREIGN KEY (contact_id) REFERENCES contacts(contact_id) 
 );
 
--- To disable constraints on the child table (campaign)
-ALTER TABLE campaign DISABLE TRIGGER ALL
-
--- Insert data into the tables
--- Import data from category.csv
-" "\\copy public.campaign (cf_id, contact_id, company_name, description, goal, pledged, outcome, backers_count, country, currency, launched_date, end_date, category, subcategory, category_id, subcategory_id) FROM '/Users/marvinalarry/Documents/Education/Tulsa Community College/Data Visualization/Homework/Challenge #13 - Project 2/Crowdfunding_ETL/Resources/campaign.csv' DELIMITER ',' CSV HEADER QUOTE '\"' ESCAPE '''';""
-
-
--- Import data from subcategory.csv
-
--- Import data from contacts.csv
-
--- Import data from campaign.csv
-
-
-
 -- View table columns and datatypes
-SELECT * FROM campaign;
 SELECT * FROM category;
 SELECT * FROM subcategory;
 SELECT * FROM contacts;
-
--- Insert data into the tables
-
--- Import data from campaign.csv
-
-
--- Import data from category.csv
-
--- Import data from subcategory.csv
-
--- Import data from contacts.csv
-
--- View the tables to ensure all data has been imported correctly
--- View table columns and datatypes
 SELECT * FROM campaign;
-SELECT * FROM category;
-SELECT * FROM subcategory;
-SELECT * FROM contacts;
+
